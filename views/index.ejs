@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">Login</a>
+            </div>
+          </nav>
+    </header>
+
+
+    <% if(locals.err_msg) { %>
+      <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+         <%= err_msg %> 
+      </div>
+      <% } %>
+  <section class="container-fluid">
+      <section class="row justify-content-center">
+          <section class="col-12 col-sm-6 col-md-3">
+             <form class="form-container" action="/user" method="post">
+                
+                 <div class="form-group input-field">
+                  <label for="">Username </label>   
+                  <input class="form-control" type="text" name="username" id="" placeholder="Enter username">
+                  </div>
+                  <div class="form-group input-field">
+                  <label for="">Password</label>    
+                 <input class="form-control" type="password" name="password" id="" placeholder="Password">
+                 </div>
+                 
+                 <button type="submit" class="btn btn-primary btn-block">Login</button>
+                 
+             </form>
+         </section>
+     </section>
+</section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
